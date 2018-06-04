@@ -1,5 +1,15 @@
-# language: c
+language: c
 compiler: gcc
-before_script: $CC -o main main.c
-script: 
-  - ./main
+before_script: "$CC -o main main.c"
+script:
+- "./main"
+
+after_script: echo $MY_SECRET_ENV
+
+notifications:
+  email:
+    recipients:
+    - sunben960729@163.com
+env:
+  global:
+    secure: KcbDfi3F1PByY6rtWHlcOvZ/AXPUgv2tsl53FskMR7SkZu3StkFFLB7MWeFhXcp19u1ADe5SFNpNZY2YTHwjDJfaHN8R8z3mi0GLuwzsJGKvjRnclRXPMacjaVkNPS0At9Xo8CUw74qa7ZNPSqqD3NUEY0/ByrUEuwK9sLbhryBTb00YZY3ehmLS3WN6wFHE/puBXFR+aWuHvR1wqeSITh5ZJWbk96Y18RCgi1xHklnm8YHvXEd3OVzXHDG5R3aCEyIQ7q45Y71UHRCX6ZaTceX/frqLIQWqpRtd4ZAtZtxLmjRpMBiBfAx5PUnOYG8v2+8TUUA2pKq6+BlwAqvaeG560wHUI2N0mIbFlRL1ahCVa7m7mB1ek8nbp3ZA6rZxM3kNHQgAz5Np542788NHO5qN8mHCp93qizNDF0nNtotKqpSNZlJcZCJni4KfTos+qyPz1lyiDVPXZAQCR4U9KeUPVRKVbqwLgOzCM41lW7cy2LJ94wmkN4YbvGybMKu3QI5eXc15N3YDOyJxzeZaIoDxhg/+d2+gSAUOStykke3tN+HL7WYsJm6KtCai4g/IBv+nzasY80Tzj7i7MF7dEE1fY5P1Y2D/G3HiH+mrmjDdieYA+p6B6hULQBn6CTXN6Ju9QEIVT0O+tmnNWBSJwenbRqmt4nKPu7fkaUpB8jY=
