@@ -1,0 +1,5 @@
+language: c
+compiler: gcc
+before_script: $CC -o main main.c
+script: 
+  - ./main
